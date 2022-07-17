@@ -3,6 +3,7 @@ package com.aldeamo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Table(name = "arrays")
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Array {
 
     @Id

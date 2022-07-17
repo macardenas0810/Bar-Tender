@@ -1,4 +1,4 @@
-package com.aldeamo.repositpory;
+package com.aldeamo.repository;
 
 import com.aldeamo.model.Array;
 import org.springframework.data.repository.CrudRepository;

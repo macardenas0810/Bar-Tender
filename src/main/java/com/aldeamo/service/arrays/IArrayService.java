@@ -1,4 +1,4 @@
-package com.aldeamo;
+package com.aldeamo.service.arrays;
 
 import com.aldeamo.model.Array;
 
@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface IArrayService {
 
-    public List<Array> obtenerArrayById();
+    public Array obtenerArrayById(Integer id);
 
 }
