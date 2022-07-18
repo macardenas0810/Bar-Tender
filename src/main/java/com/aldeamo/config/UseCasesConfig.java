@@ -1,6 +1,6 @@
 package com.aldeamo.config;
 
-import com.aldeamo.service.IProcesarVasos;
+import com.aldeamo.service.procesarvasos.IProcesarVasos;
 import com.aldeamo.service.useCase.BarTenderUseCase;
 import com.aldeamo.service.arrays.IObtenerArrayPila;
 import com.aldeamo.service.numerosPrimo.INumerosPrimos;

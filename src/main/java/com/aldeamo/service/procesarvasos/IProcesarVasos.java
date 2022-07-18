@@ -1,4 +1,4 @@
-package com.aldeamo.service;
+package com.aldeamo.service.procesarvasos;
 
 public interface IProcesarVasos {
 

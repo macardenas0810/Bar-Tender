@@ -103,10 +103,10 @@
 				</executions>
 				<configuration>
 					<excludes>
-						<!--<exclude>**/*Satellite.class</exclude>
 						<exclude>**/model/**</exclude>
 						<exclude>**/controller/*</exclude>
-						<exclude>**/OperacionFuegoQuasarApplication.class</exclude>-->
+						<exclude>**/util/*</exclude>
+						<exclude>**/PruebaBarTenderApplication.class</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

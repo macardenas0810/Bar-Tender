@@ -1,6 +1,5 @@
 package com.aldeamo.service.numerosPrimo;
 
-import com.aldeamo.service.numerosPrimo.INumerosPrimos;
 import org.springframework.stereotype.Service;
 
 @Service

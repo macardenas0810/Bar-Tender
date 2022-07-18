@@ -1,11 +1,12 @@
-package com.aldeamo.service;
+package com.aldeamo.service.procesarvasos;
+
 
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
 @Service
-public class ProcesarVasos implements IProcesarVasos{
+public class ProcesarVasos implements IProcesarVasos {
 
 
     @Override

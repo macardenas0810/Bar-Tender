@@ -1,11 +1,12 @@
 package com.aldeamo.service.useCase;
 
-import com.aldeamo.service.IProcesarVasos;
+import com.aldeamo.service.procesarvasos.IProcesarVasos;
 import com.aldeamo.service.arrays.IObtenerArrayPila;
 import com.aldeamo.service.numerosPrimo.INumerosPrimos;
+import com.aldeamo.util.Constantes;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+
 
 
 @AllArgsConstructor
@@ -28,27 +29,27 @@ public class BarTenderUseCase {
         String respuesta=null;
 
         if(pila<1 || pila >5){
-            throw  new RuntimeException("La pila a seleccionar debe estar dentro de 1 y 5");
+            throw  new RuntimeException(Constantes.ERROR_RANGO_PILA);
         }
         if(iteraciones<1){
-            throw  new RuntimeException("para obtener los numeros primos se debe enviar un numero mayor a 1");
+            throw  new RuntimeException(Constantes.ERROR_VALOR_ITERACIONES);
         }
 
         vasos= iObtenerArrayPila.obtenerRegistroPila(pila);
         if(vasos.length==0){
-            throw  new RuntimeException("La pila seleccionada no contiene registros validos");
+            throw  new RuntimeException(Constantes.ERROR_OBT_REGISTRO_PILA);
         }
 
         try {
             numerosPrimos =iNumerosPrimos.ObtenerNumerosPrimos(iteraciones);
         }catch (Exception e){
-            throw  new RuntimeException("No se pudo obtener los números primos para las iteraciones enviadas");
+            throw  new RuntimeException(Constantes.ERROR_OBT_NUMEROS_PRIMOS);
         }
 
         try {
             respuesta =iProcesarVasos.obtenerVasos(numerosPrimos,vasos,iteraciones);
         }catch (Exception e){
-            throw  new RuntimeException("No se pudo obtener los números primos para las iteraciones enviadas");
+            throw  new RuntimeException(Constantes.ERROR_OBT_VASOS);
         }
 
 
